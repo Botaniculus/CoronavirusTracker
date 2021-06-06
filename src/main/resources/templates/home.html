@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cz" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Koronavirus v ČR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+        <h1>Koronavirus v ČR</h1>
+        <div class="jumbotron">
+            <h1 class="display-4" th:text="${potvrzene_pripady_celkem}">0</h1>
+            <p class="lead">Celkový počet potvrzených případů</p>
+        </div>
+
+        <table class="table">
+            <tr class="table-primary">
+                <th>Provedené testy celkem</th>
+                <td th:text="${provedene_testy_celkem}"></td>
+            </tr>
+            <tr class="table-warning">
+                <th>Potvrzené případy celkem</th>
+                <td th:text="${potvrzene_pripady_celkem}"></td>
+            </tr>
+
+            <tr class="table-primary">
+                <th>Provedené testy včerejší den</th>
+                <td th:text="${provedene_testy_vcerejsi_den}"></td>
+            </tr>
+
+            <tr class="table-warning">
+                <th>Potvrzené případy včerejší den</th>
+                <td th:text="${potvrzene_pripady_vcerejsi_den}"></td>
+            </tr>
+            <tr class="table-warning">
+                <th>Potvrzené případy dnešní den</th>
+                <td th:text="${potvrzene_pripady_dnesni_den}"></td>
+            </tr>
+
+            <tr class="table-info">
+                <th>Aktivní případy</th>
+                <td th:text="${aktivni_pripady}"></td>
+            </tr>
+            <tr class="table-success">
+                <th>Vyléčení</th>
+                <td th:text="${vyleceni}"></td>
+            </tr>
+            <tr class="table-danger">
+                <th>Úmrtí</th>
+                <td th:text="${umrti}"></td>
+            </tr>
+            <tr class="table-info">
+                <th>Aktuálně hospitalizovaní</th>
+                <td th:text="${aktualne_hospitalizovani}"></td>
+            </tr>
+            <hr>
+            <tr class="table-success">
+                <th>Očkování celkem</th>
+                <td th:text="${vykazana_ockovani_celkem}"></td>
+            </tr>
+            <tr class="table-success">
+                <th>Očkování za včerejší den</th>
+                <td th:text="${vykazana_ockovani_vcerejsi_den}"></td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+<footer></footer>
+</html>
